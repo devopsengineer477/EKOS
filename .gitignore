@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local databases and indexes (rebuildable)
+*.sqlite
+*.sqlite3
+*.db
+index-data/
+vector-index/
+
+# Local models
+models/
+*.gguf
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build output
+.next/
+node_modules/
+dist/
+build/
+
+# Local logs and temporary files
+*.log
+tmp/
+temp/

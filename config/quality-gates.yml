@@ -1,0 +1,25 @@
+required_front_matter:
+  - id
+  - title
+  - technology
+  - category
+  - content_type
+  - difficulty
+  - status
+  - created
+  - sources
+  - tags
+
+allowed_status:
+  - draft
+  - reviewed
+  - verified
+  - deprecated
+
+rules:
+  unique_document_ids: true
+  require_source_for_technical_claims: true
+  require_version_scope_for_version_sensitive_topics: true
+  prohibit_secrets: true
+  require_validation_for_verified_examples: true
+  require_replacement_link_for_deprecated_documents: recommended

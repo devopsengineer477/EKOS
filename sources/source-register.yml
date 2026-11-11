@@ -1,0 +1,36 @@
+sources:
+  - id: SRC-GHA-DOCS
+    title: GitHub Actions documentation
+    url: https://docs.github.com/en/actions
+    publisher: GitHub
+    source_type: official-documentation
+    accessed: null
+    scope: GitHub Actions
+    notes: Primary documentation entry point; follow topic-specific pages for claims.
+
+  - id: SRC-GHA-REFERENCE
+    title: GitHub Actions reference
+    url: https://docs.github.com/en/actions/reference
+    publisher: GitHub
+    source_type: official-reference
+    accessed: null
+    scope: GitHub Actions
+    notes: Syntax, contexts, expressions and reference material.
+
+  - id: SRC-GHA-SECURITY
+    title: Security hardening for GitHub Actions
+    url: https://docs.github.com/en/actions/security-for-github-actions
+    publisher: GitHub
+    source_type: official-security-guidance
+    accessed: null
+    scope: GitHub Actions
+    notes: Security guidance; review frequently.
+
+  - id: SRC-GHA-RUNNER
+    title: actions/runner source repository
+    url: https://github.com/actions/runner
+    publisher: GitHub
+    source_type: official-source-code
+    accessed: null
+    scope: GitHub Actions runner
+    notes: Useful for implementation-level investigation; source code does not replace documented product contracts.

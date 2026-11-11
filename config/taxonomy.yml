@@ -1,0 +1,44 @@
+document_status:
+  - draft
+  - reviewed
+  - verified
+  - deprecated
+
+difficulty:
+  - beginner
+  - intermediate
+  - advanced
+  - expert
+
+content_types:
+  - concept
+  - architecture
+  - technical-guide
+  - feature-reference
+  - implementation
+  - troubleshooting
+  - edge-case
+  - security-guide
+  - case-study
+  - experiment
+  - checklist
+  - glossary
+
+github_actions_categories:
+  - fundamentals
+  - architecture
+  - workflow-syntax
+  - events-and-triggers
+  - jobs-and-steps
+  - expressions-and-contexts
+  - runners
+  - reusable-components
+  - artifacts-and-caching
+  - security
+  - integrations
+  - deployment
+  - observability
+  - troubleshooting
+  - edge-cases
+  - patterns
+  - case-studies
