@@ -115,3 +115,12 @@ sources:
     accessed: 2026-11-11
     scope: Runner autoscaling
     notes: Kubernetes-based runner scale sets.
+
+  - id: SRC-GHA-CONTEXTS
+    title: Contexts reference
+    url: https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
+    publisher: GitHub
+    source_type: official-reference
+    accessed: 2026-11-11
+    scope: GitHub Actions contexts
+    notes: Reference for context availability and expression usage.

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EKOS local engineering knowledge explorer">
+  <title>EKOS — Engineering Knowledge Explorer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/" aria-label="EKOS home"><span class="brand-mark">E</span><span><strong>EKOS</strong><small>Engineering Knowledge Operating System</small></span></a>
+  <div class="top-actions"><span class="offline-pill"><i></i> Local · AI independent</span><button id="refreshBtn" class="icon-button" title="Refresh index status" aria-label="Refresh status">↻</button></div>
+</header>
+<main class="shell">
+  <section class="hero">
+    <div class="eyebrow">YOUR ENGINEERING KNOWLEDGE BASE</div>
+    <h1>Find the knowledge<br><em>behind the work.</em></h1>
+    <p>Search your curated engineering encyclopedia, explore relationships and trace every answer back to its source.</p>
+    <div class="searchbar">
+      <span class="search-icon">⌕</span>
+      <input id="query" type="search" placeholder="Search workflows, runners, CI/CD, security..." autocomplete="off">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="quick-search"><span>Try:</span><button data-query="runner">runner</button><button data-query="workflow">workflow</button><button data-query="security">security</button><button data-query="lifecycle">lifecycle</button></div>
+  </section>
+
+  <section class="workspace">
+    <aside class="filters panel">
+      <div class="panel-title"><span>Refine results</span><button id="clearFilters" class="text-button">Clear</button></div>
+      <label>Technology<select id="technology"><option value="">All technologies</option></select></label>
+      <label>Category<select id="category"><option value="">All categories</option></select></label>
+      <label>Document status<select id="status"><option value="">All statuses</option></select></label>
+      <div class="filter-note"><span class="tiny-dot"></span> Filters are applied locally</div>
+      <div class="sidebar-divider"></div>
+      <button class="nav-action active" data-view="search"><span>⌕</span> Knowledge search</button>
+      <button class="nav-action" data-view="sources"><span>↗</span> Source library</button>
+      <div class="sidebar-foot"><strong>EKOS local index</strong><span id="indexStatus">Checking index…</span><span id="indexCounts"></span></div>
+    </aside>
+
+    <section class="results-column">
+      <div class="results-heading"><div><div class="eyebrow" id="resultEyebrow">KNOWLEDGE SEARCH</div><h2 id="resultsTitle">Explore your knowledge</h2></div><span class="result-count" id="resultCount">—</span></div>
+      <div id="results" class="results-list"><div class="empty-state"><div class="empty-icon">⌕</div><h3>Search your knowledge base</h3><p>Enter a term above or choose one of the suggested searches.</p></div></div>
+    </section>
+  </section>
+
+  <section class="assistant-panel panel">
+    <div class="assistant-icon">✳</div>
+    <div class="assistant-content">
+      <div class="eyebrow">RETRIEVAL-READY · NO AI REQUIRED</div>
+      <h2>Ask EKOS</h2>
+      <p>Ask a question in plain language. EKOS will retrieve matching documents and sources. This milestone does not generate AI answers; it gives you traceable evidence to read.</p>
+      <div class="ask-row"><input id="askQuery" type="text" placeholder="e.g. How are self-hosted runners selected?"><button id="askBtn">Find evidence</button></div>
+      <div id="askResults" class="ask-results" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <footer><span>EKOS · Offline-first engineering knowledge</span><span>Markdown is the source of truth · SQLite is rebuildable</span></footer>
+</main>
+
+<div id="drawerBackdrop" class="drawer-backdrop"></div>
+<aside id="documentDrawer" class="document-drawer" aria-label="Document viewer" aria-hidden="true">
+  <div class="drawer-head"><div><div class="eyebrow">KNOWLEDGE DOCUMENT</div><h2 id="drawerTitle">Document</h2><span id="drawerMeta" class="drawer-meta"></span></div><button id="closeDrawer" class="icon-button" aria-label="Close document">×</button></div>
+  <div class="drawer-tabs"><button class="tab active" data-tab="content">Content</button><button class="tab" data-tab="relationships">Related documents</button><button class="tab" data-tab="sources">Sources</button></div>
+  <div id="drawerBody" class="drawer-body"></div>
+</aside>
+<script src="/app.js" defer></script>
+</body>
+</html>

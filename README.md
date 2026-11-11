@@ -182,3 +182,99 @@ Read these documents in order:
 Update the technology master index as topics are researched, reviewed and experimentally verified. Do not mark examples verified until they have been run in the stated environment.
 
 The first practical lab is `experiments/github-actions/EXP-GHA-001-manual-dispatch.md`. Its starter workflow is also available at `code-examples/github-actions/hello-ekos.yml`. Run it in a disposable repository and only then change the experiment status to `verified`.
+
+
+## Milestone 3 — Knowledge Quality Gate
+
+The validator now checks:
+- YAML front matter presence and required metadata fields
+- Document ID format and duplicate IDs
+- Allowed lifecycle statuses
+- `last_reviewed` date format
+- Source IDs against `sources/source-register.yml`
+- Required document sections
+- Broken relative Markdown links
+
+### Run validation (Windows PowerShell)
+```powershell
+python --version
+python tools/validate_knowledge.py
+python tools/validate_knowledge.py --strict
+python tools/validate_knowledge.py --json
+```
+No virtual environment or third-party dependencies are required.
+
+### What the gate does not prove
+A passing result confirms repository structure and reference integrity only. It does not fact-check technical claims, fully parse every YAML feature, execute code examples, or verify a live GitHub Actions workflow. Keep `reviewed` and `verified` statuses distinct.
+
+
+## Quality-gate behavior and limitations
+
+The validator supports EKOS's existing nested source metadata format (`sources: - id: ...`) and skips repository/technology README and master-index navigation pages. A successful run confirms structural consistency only; it does not fact-check content or run GitHub workflows.
+
+
+## Milestone 4 — Local Knowledge Indexing Engine
+
+EKOS now includes a local SQLite + FTS5 index and command-line search/navigation tools. The Markdown/YAML repository remains the source of truth; the SQLite database is generated and rebuildable.
+
+### Build the index
+```powershell
+python tools/build_index.py
+```
+
+### Search and filter
+```powershell
+python tools/search.py search runner
+python tools/search.py search workflow --technology github-actions --category architecture --status reviewed --limit 10
+```
+
+### Open document relationships and sources
+```powershell
+python tools/search.py show GHA-ARCH-001
+python tools/search.py sources
+python tools/search.py sources --query runner
+```
+
+### Run automated tests
+```powershell
+python -m unittest discover -s tests -v
+```
+
+No external AI provider or third-party Python package is required. Python's SQLite build must include FTS5. Rebuild the index after changing knowledge documents or the source register.
+
+
+## Milestone 5 — Local Knowledge Explorer
+
+EKOS now has a browser-based local UI served by Python's standard-library HTTP server. It uses the SQLite/FTS5 index from Milestone 4.
+
+### Start the application (Windows PowerShell)
+```powershell
+.\run-ekos.ps1
+```
+Then open **http://127.0.0.1:8765** in your browser. Stop the server with Ctrl+C.
+
+Alternatively:
+```powershell
+python tools/build_index.py
+python app/server.py
+```
+
+### Included UI capabilities
+- Full-text knowledge search and quick-search suggestions
+- Technology, category and status filters
+- Document viewer with basic Markdown rendering
+- Related-document explorer
+- Source library and external source links
+- Retrieval-ready “Ask EKOS” panel that returns evidence documents without generating AI answers
+- Local index health and document/source counts
+
+### API endpoints
+`/api/health`, `/api/search`, `/api/filters`, `/api/documents/<document-id>`, `/api/sources`.
+
+### Run tests
+```powershell
+python -m unittest discover -s tests -v
+python tools/validate_knowledge.py
+```
+
+No external AI provider, Node.js, npm or third-party Python package is required. The server binds to localhost only. Do not expose it to a network without adding production-grade security controls.

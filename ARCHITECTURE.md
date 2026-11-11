@@ -208,3 +208,15 @@ M6: optional local LLM/RAG chat and evaluation harness
 The first five GitHub Actions documents are stored as Markdown with YAML front matter. They cover the platform overview, component architecture, workflow execution lifecycle, runner types/routing and minimal workflow syntax. Their source metadata points to official GitHub documentation. They are marked `reviewed`, not `verified`, because no live workflow execution has yet been recorded.
 
 The next knowledge phase should deepen events/triggers, YAML schema, contexts/expressions and hands-on experiments. The offline application remains out of scope for this phase.
+
+
+## Milestone 3 quality gate
+The standard-library validator runs locally and can later run in CI. It performs deterministic structural checks before human technical review. The source register is the canonical list of source IDs. Knowledge documents link to local files using relative Markdown links.
+
+
+## Milestone 4 — local indexing and retrieval
+The Markdown/YAML repository remains canonical. A standard-library Python indexer extracts document metadata, content, headings, source IDs and related-document IDs into SQLite. FTS5 powers offline full-text retrieval. Search results can be filtered by technology, category and lifecycle status; detail navigation exposes related documents and registered sources. The generated SQLite file is disposable and can be rebuilt at any time.
+
+
+## Milestone 5 — local web explorer
+A Python standard-library HTTP server exposes read-only endpoints over the SQLite index. A dependency-free HTML/CSS/JavaScript client provides search, metadata filters, document reading, relationship navigation, source links and a retrieval-only question panel. The service binds to loopback (`127.0.0.1`) and does not call external AI services.

@@ -83,3 +83,11 @@ A technology is not complete merely because its table of contents is large. Comp
 - [x] GHA-REF-001 — Minimal Workflow Syntax Reference
 
 Phase 1 documents are source-reviewed. Practical workflow examples remain unverified until executed in a disposable GitHub repository.
+
+- Milestone 3: Knowledge Quality Gate — metadata, duplicate IDs, source integrity, links, sections and statuses.
+
+- Milestone 4: local SQLite/FTS5 indexing, full-text search, metadata filters, relationship navigation and source navigation.
+- Next: local web UI over the search API/engine; later add optional local semantic search without making it mandatory.
+
+- Milestone 5: local browser-based Knowledge Explorer with filters, document viewer, source and relationship navigation, plus retrieval-only Ask EKOS panel.
+- Next: improve indexing and retrieval (incremental rebuild, query highlighting/ranking, richer relationship types), then optional local semantic retrieval and local-model answer synthesis.
