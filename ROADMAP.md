@@ -13,16 +13,16 @@
 
 ## M2 — GitHub Actions encyclopedia
 
-- [ ] Establish official source register
-- [ ] Map the product documentation taxonomy
-- [ ] Research fundamentals and architecture
-- [ ] Document workflow syntax and events
+- [x] Establish official source register
+- [x] Map the initial product documentation taxonomy
+- [x] Research and document fundamentals and architecture (five reviewed documents)
+- [~] Document minimal workflow syntax; detailed syntax and event catalog remain
 - [ ] Document jobs, steps, expressions and contexts
 - [ ] Document runners and reusable components
 - [ ] Document artifacts, caching and security
 - [ ] Document integrations and deployment patterns
 - [ ] Build troubleshooting and edge-case catalogue
-- [ ] Verify selected examples in a test repository
+- [ ] Verify selected examples in a test repository (GHA-EXP-001 is ready to run)
 
 ## M3 — Offline ingestion and search
 
@@ -72,3 +72,14 @@ A technology is not complete merely because its table of contents is large. Comp
 - sources and version scope;
 - validation evidence for selected examples;
 - coverage gaps explicitly recorded.
+
+
+### M2 Phase 1 — completed deliverables
+
+- [x] GHA-FUND-001 — What Is GitHub Actions?
+- [x] GHA-ARCH-001 — Core Components and Conceptual Architecture
+- [x] GHA-ARCH-002 — Workflow Run and Job Execution Lifecycle
+- [x] GHA-RUN-001 — Runner Types and Job Routing
+- [x] GHA-REF-001 — Minimal Workflow Syntax Reference
+
+Phase 1 documents are source-reviewed. Practical workflow examples remain unverified until executed in a disposable GitHub repository.

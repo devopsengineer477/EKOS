@@ -196,8 +196,15 @@ A document's workflow status is separate:
 ## 11. Future evolution
 
 M1: standards and repository scaffold  
-M2: GitHub Actions research, source register and core knowledge documents  
+M2: GitHub Actions research, source register and core knowledge documents (Phase 1: five reviewed documents)  
 M3: offline importer, metadata validation and FTS5 index  
 M4: search UI and troubleshooting experience  
 M5: local embeddings and hybrid retrieval  
 M6: optional local LLM/RAG chat and evaluation harness
+
+
+## 12. Milestone 2 Phase 1 implementation note
+
+The first five GitHub Actions documents are stored as Markdown with YAML front matter. They cover the platform overview, component architecture, workflow execution lifecycle, runner types/routing and minimal workflow syntax. Their source metadata points to official GitHub documentation. They are marked `reviewed`, not `verified`, because no live workflow execution has yet been recorded.
+
+The next knowledge phase should deepen events/triggers, YAML schema, contexts/expressions and hands-on experiments. The offline application remains out of scope for this phase.

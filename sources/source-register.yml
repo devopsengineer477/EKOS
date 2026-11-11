@@ -34,3 +34,84 @@ sources:
     accessed: null
     scope: GitHub Actions runner
     notes: Useful for implementation-level investigation; source code does not replace documented product contracts.
+
+  - id: SRC-GHA-UNDERSTAND
+    title: Understanding GitHub Actions
+    url: https://docs.github.com/en/actions/get-started/understand-github-actions
+    publisher: GitHub
+    source_type: official-documentation
+    accessed: 2026-11-11
+    scope: GitHub Actions fundamentals
+    notes: Primary source for core components and concepts.
+
+  - id: SRC-GHA-CONCEPTS
+    title: Concepts for GitHub Actions
+    url: https://docs.github.com/en/actions/concepts
+    publisher: GitHub
+    source_type: official-documentation
+    accessed: 2026-11-11
+    scope: GitHub Actions concepts
+    notes: Concept taxonomy for workflows, runners, security and related capabilities.
+
+  - id: SRC-GHA-WORKFLOW-SYNTAX
+    title: Workflow syntax for GitHub Actions
+    url: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+    publisher: GitHub
+    source_type: official-reference
+    accessed: 2026-11-11
+    scope: Workflow YAML syntax
+    notes: Primary syntax reference; recheck before implementing version-sensitive keys.
+
+  - id: SRC-GHA-EVENTS
+    title: Events that trigger workflows
+    url: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows
+    publisher: GitHub
+    source_type: official-reference
+    accessed: 2026-11-11
+    scope: Workflow events
+    notes: Event types, activity types, payloads and filters.
+
+  - id: SRC-GHA-TROUBLESHOOT
+    title: Troubleshooting workflows
+    url: https://docs.github.com/en/actions/how-tos/troubleshoot-workflows
+    publisher: GitHub
+    source_type: official-guidance
+    accessed: 2026-11-11
+    scope: Workflow troubleshooting
+    notes: Trigger and workflow troubleshooting guidance.
+
+  - id: SRC-GHA-HOSTED-RUNNERS
+    title: GitHub-hosted runners
+    url: https://docs.github.com/en/actions/concepts/runners/github-hosted-runners
+    publisher: GitHub
+    source_type: official-documentation
+    accessed: 2026-11-11
+    scope: Hosted runners
+    notes: Hosted runner lifecycle and environment model.
+
+  - id: SRC-GHA-SELFHOSTED-REF
+    title: Self-hosted runners reference
+    url: https://docs.github.com/en/actions/reference/runners/self-hosted-runners
+    publisher: GitHub
+    source_type: official-reference
+    accessed: 2026-11-11
+    scope: Self-hosted runners
+    notes: Requirements, routing, communication and scaling.
+
+  - id: SRC-GHA-CHOOSE-RUNNER
+    title: Choosing the runner for a job
+    url: https://docs.github.com/en/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job
+    publisher: GitHub
+    source_type: official-guidance
+    accessed: 2026-11-11
+    scope: Runner selection
+    notes: `runs-on` selection and labels.
+
+  - id: SRC-GHA-ARC
+    title: Actions Runner Controller
+    url: https://docs.github.com/en/actions/concepts/runners/actions-runner-controller
+    publisher: GitHub
+    source_type: official-documentation
+    accessed: 2026-11-11
+    scope: Runner autoscaling
+    notes: Kubernetes-based runner scale sets.

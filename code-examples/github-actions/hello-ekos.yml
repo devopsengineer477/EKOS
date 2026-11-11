@@ -1,0 +1,21 @@
+name: Hello EKOS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hello:
+    name: First learning job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: echo "Hello from EKOS and GitHub Actions"
+
+      - name: Show run context
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Commit: $GITHUB_SHA"
+          echo "Runner OS: $RUNNER_OS"

@@ -5,29 +5,29 @@ Status legend: `[ ]` not started · `[~]` researching/draft · `[R]` reviewed ·
 This is a coverage map, not a claim that every item is fully documented. Add document IDs and source references as topics are authored.
 
 ## 01. Fundamentals
-- [ ] What GitHub Actions is and when to use it
-- [ ] CI, CD and workflow automation concepts
-- [ ] Core terminology: workflow, event, job, step, action, runner
+- [R] What GitHub Actions is and when to use it
+- [R] CI, CD and workflow automation concepts
+- [R] Core terminology: workflow, event, job, step, action, runner
 - [ ] Repository, organization and enterprise scope
 - [ ] GitHub Actions limits, quotas and billing concepts (version/date-sensitive)
-- [ ] GitHub-hosted versus self-hosted execution
+- [R] GitHub-hosted versus self-hosted execution
 
 ## 02. Architecture and execution lifecycle
-- [ ] Workflow discovery and event dispatch
-- [ ] Job scheduling and dependency graph
-- [ ] Runner allocation and lifecycle
-- [ ] Step execution and shell behavior
+- [R] Workflow discovery and event dispatch
+- [R] Job scheduling and dependency graph
+- [R] Runner allocation and lifecycle
+- [R] Step execution and shell behavior
 - [ ] Job completion, outputs and cleanup
 - [ ] Cancellation, timeout and retry behavior
-- [ ] Logs, status and check runs
+- [R] Logs, status and check runs
 - [ ] Service architecture: documented public model versus implementation details
 
 ## 03. Workflow syntax and YAML
-- [ ] Workflow file location and naming
-- [ ] Top-level keys and schema
-- [ ] `name`, `run-name`, `on`, `permissions`
-- [ ] `env`, `defaults`, `concurrency`
-- [ ] `jobs`, `uses`, `run`, `with`
+- [R] Workflow file location and naming
+- [R] Top-level keys and schema
+- [R] `name`, `run-name`, `on`, `permissions`
+- [R] `env`, `defaults`, `concurrency`
+- [R] `jobs`, `uses`, `run`, `with`
 - [ ] `needs`, `if`, `continue-on-error`, `timeout-minutes`
 - [ ] YAML quoting, booleans, arrays and mapping pitfalls
 - [ ] Workflow validation and linting
@@ -255,9 +255,40 @@ This is a coverage map, not a claim that every item is fully documented. Add doc
 | Metric | Current |
 |---|---:|
 | Topics listed | 200+ |
-| Documents authored | 0 |
-| Reviewed documents | 0 |
+| Documents authored | 6 |
+| Reviewed documents | 5 |
 | Verified examples | 0 |
 | Open research gaps | To be assessed |
 
 Update this table as documents are created. Do not count an index bullet as completed knowledge.
+
+
+## Authored documents — Milestone 2 Phase 1
+
+| ID | Document | Status |
+|---|---|---|
+| GHA-FUND-001 | What Is GitHub Actions? | Reviewed |
+| GHA-ARCH-001 | Core Components and Conceptual Architecture | Reviewed |
+| GHA-ARCH-002 | Workflow Run and Job Execution Lifecycle | Reviewed |
+| GHA-RUN-001 | Runner Types and Job Routing | Reviewed |
+| GHA-REF-001 | Minimal Workflow Syntax Reference | Reviewed |
+
+`Reviewed` means checked against the listed official references. The example workflows have not yet been run in a live GitHub repository, so they are not labeled `verified`.
+
+## Phase 1 gaps to address in later phases
+
+- Detailed event catalog and event payload reference.
+- Full YAML schema and field-by-field reference.
+- Context and expression reference.
+- Job/step outputs and cross-job artifact patterns.
+- Runner group/label administration and self-hosted hardening.
+- Feature limits, plan-specific availability and billing references.
+- Practical test repository experiments and CI validation.
+
+## Practical experiment
+
+| ID | Experiment | Current status |
+|---|---|---|
+| GHA-EXP-001 | First workflow using manual dispatch | Draft — awaiting execution in a GitHub repository |
+
+Starter workflow: `code-examples/github-actions/hello-ekos.yml`.

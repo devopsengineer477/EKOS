@@ -167,3 +167,18 @@ git commit -m "chore: initialize EKOS knowledge foundation"
 ```
 
 No Python packages or external services are required for the documentation repository itself.
+
+
+## First GitHub Actions learning path
+
+Read these documents in order:
+
+1. `knowledge/technologies/github-actions/fundamentals/GHA-FUND-001-what-is-github-actions.md`
+2. `knowledge/technologies/github-actions/architecture/GHA-ARCH-001-core-components-and-architecture.md`
+3. `knowledge/technologies/github-actions/architecture/GHA-ARCH-002-workflow-run-lifecycle.md`
+4. `knowledge/technologies/github-actions/runners/GHA-RUN-001-runner-types-and-job-routing.md`
+5. `knowledge/technologies/github-actions/workflow-syntax/GHA-REF-001-minimal-workflow-syntax.md`
+
+Update the technology master index as topics are researched, reviewed and experimentally verified. Do not mark examples verified until they have been run in the stated environment.
+
+The first practical lab is `experiments/github-actions/EXP-GHA-001-manual-dispatch.md`. Its starter workflow is also available at `code-examples/github-actions/hello-ekos.yml`. Run it in a disposable repository and only then change the experiment status to `verified`.
